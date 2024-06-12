@@ -4,7 +4,7 @@ const range_element =      document.getElementById("range")
 const label_element =      document.getElementById("range-label")
 const button_element =      document.getElementById("button")
 
-let ammount_of_primes_to_generate = 1
+let amount_of_primes_to_generate = 1
 let current_highest_prime = 0
 
 
@@ -32,13 +32,13 @@ function isPrime(num) {
 
 range_element.addEventListener("input", function(){
 
-    ammount_of_primes_to_generate = range_element.value
+    amount_of_primes_to_generate = range_element.value
 
-    label_element.textContent = ammount_of_primes_to_generate
-    if(ammount_of_primes_to_generate === "1"){
+    label_element.textContent = amount_of_primes_to_generate
+    if(amount_of_primes_to_generate === "1"){
         button_element.textContent = "Next prime"
     }else{
-        button_element.textContent = "Next " + ammount_of_primes_to_generate + " primes"
+        button_element.textContent = "Next " + amount_of_primes_to_generate + " primes"
     }
 })
 
@@ -46,7 +46,7 @@ range_element.addEventListener("input", function(){
 
 
 button_element.addEventListener("click", function(){
-for(let i=0; i<ammount_of_primes_to_generate; i++){
+for(let i=0; i<amount_of_primes_to_generate; i++){
         let next = next_prime(current_highest_prime)
 
         paragraph_element.textContent = paragraph_element.textContent.slice(0,-1)
